@@ -33,5 +33,11 @@ namespace drawer
             get => (Page)GetValue(DrawerProperty);
             set => SetValue(DrawerProperty, value);
         }
+
+        protected override void LayoutChildren(double x, double y, double width, double height)
+        {
+            base.LayoutChildren(x, y, width, height);
+            CurrentPage?.Layout(new Rectangle(x, y, width, height));
+        }
     }
 }

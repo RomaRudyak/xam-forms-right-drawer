@@ -8,6 +8,8 @@ namespace drawer
         {
             InitializeComponent();
 
+            //NavigationPage
+
             MainPage = new DrawerContainerPage
             {
                 CurrentPage = new drawerPage(),
